@@ -49,9 +49,9 @@ public class inicio extends AppCompatActivity {
                                     .build(),
                             RC_SIGN_IN);
                 }else{
-                    startActivity ( new Intent( packageContext: inicio.this ,sessionIniciada.class  ));
+                    Intent mIntent = new Intent(inicio.this, sessionIniciada.class);
+                    startActivity(mIntent);
                     finish();
-
                 }
             }
         });
@@ -70,8 +70,8 @@ public class inicio extends AppCompatActivity {
                 // Successfully signed in
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-                String packageContext;
-                startActivity (   new Intent( packageContext: inicio.this,sessionIniciada.class ));
+                Intent mIntent = new Intent(inicio.this, sessionIniciada.class);
+                startActivity (mIntent);
                 finish();
                 // ...
             } else {
